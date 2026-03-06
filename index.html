@@ -26,6 +26,11 @@
           <li><a href="support/">Support</a></li>
         </ul>
       </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
     </div>
   </header>
 
@@ -174,6 +179,19 @@
     const pad = n => String(n).padStart(2, '0');
     document.getElementById('sync-time').textContent =
       `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())} UTC`;
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteHeader = document.querySelector('.site-header');
+    navToggle.addEventListener('click', () => {
+      const open = siteHeader.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!siteHeader.contains(e.target)) {
+        siteHeader.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   </script>
 
 </body>
