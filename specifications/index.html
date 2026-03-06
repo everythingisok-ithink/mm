@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specifications — AETHERA ASU-1</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../" class="wordmark">
+        <span class="brand">Aethera</span>
+        <span class="model">ASU-1</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="../">Overview</a></li>
+          <li><a href="../specifications/" class="active">Specifications</a></li>
+          <li><a href="../manual/">Manual</a></li>
+          <li><a href="../firmware/">Firmware</a></li>
+          <li><a href="../support/">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="status-bar">
+    <div class="status-bar-inner">
+      <div class="status-item"><span class="status-dot"></span> System nominal</div>
+      <div class="status-item"><span class="status-dot dim"></span> Viewing: ASU-1 Rev. C</div>
+      <div class="status-item"><span class="status-dot dim"></span> Doc version 4.1</div>
+      <div class="status-item"><span class="status-dot red"></span> Section 4 restricted</div>
+    </div>
+  </div>
+
+  <main>
+    <div class="site-wrapper">
+      <div class="page-hero">
+        <div class="eyebrow">Technical Documentation</div>
+        <h1>Specifications</h1>
+        <p class="subtitle">Complete technical parameters for the AETHERA ASU-1, Revision C. Some values are withheld pending distribution authorization. Redacted fields are marked accordingly.</p>
+      </div>
+
+      <div class="compare-bar">
+        <span class="cb-text">Showing: <span>ASU-1 / Revision C</span> &nbsp;·&nbsp; Released Q3 2023 &nbsp;·&nbsp; Current production unit</span>
+        <span class="revision-badge">Rev. C — Current</span>
+      </div>
+
+      <div class="download-row">
+        <a href="#" class="dl-btn">↓ Download PDF Datasheet</a>
+        <a href="#" class="dl-btn">↓ CAD Package</a>
+        <a href="#" class="dl-btn">↓ Interface Reference</a>
+      </div>
+
+      <!-- PHYSICAL -->
+      <div class="spec-group">
+        <div class="section-label">01</div>
+        <div class="spec-group-header"><h2>Physical &amp; Mechanical</h2></div>
+        <table class="spec-table">
+          <tr><td>Dimensions (H × W × D)</td><td>148 mm × 228 mm × 82 mm</td></tr>
+          <tr><td>Weight (bare unit)</td><td>1.94 kg</td></tr>
+          <tr><td>Weight (field configured)</td><td>2.31 kg</td></tr>
+          <tr><td>Primary housing</td><td>6061-T6 billet aluminum, CNC milled, brushed finish</td></tr>
+          <tr><td>Side panels</td><td>American black walnut, stabilized resin infusion, sealed</td></tr>
+          <tr><td>Display bezel</td><td>Single-billet machined aluminum, porthole geometry, 102mm aperture</td></tr>
+          <tr><td>Toggle switches</td><td>Mil-spec brass, positive-click, rated 100,000 cycles minimum</td></tr>
+          <tr><td>Rotary controls</td><td>Knurled aluminum, sealed bearing, torque-adjustable (4 primary, 2 secondary)</td></tr>
+          <tr><td>Carry handle</td><td>316 stainless steel, welded, load-rated 22 kg</td></tr>
+          <tr><td>Environmental rating</td><td>IP67 (submersion to 1m / 30 min), MIL-STD-810H vibration and shock</td></tr>
+          <tr><td>Operating temperature</td><td>−32°C to +55°C</td></tr>
+          <tr><td>Storage temperature</td><td>−50°C to +70°C</td></tr>
+        </table>
+      </div>
+
+      <!-- POWER -->
+      <div class="spec-group">
+        <div class="section-label">02</div>
+        <div class="spec-group-header"><h2>Power System</h2></div>
+        <table class="spec-table">
+          <tr><td>Primary battery</td><td>Lithium iron phosphate (LiFePO₄), 18,000 mAh</td></tr>
+          <tr><td>Operational duration</td><td>72 hr (standard load) &nbsp;/&nbsp; 41 hr (maximum load)</td></tr>
+          <tr><td>Standby duration</td><td>21 days</td></tr>
+          <tr><td>Charge input</td><td>USB-C PD 100W, or external DC 12–28V via barrel connector</td></tr>
+          <tr><td>Charge time (0→100%)</td><td>3.5 hr via PD 100W</td></tr>
+          <tr><td>Cold weather performance</td><td>Rated to −32°C with ≤12% capacity reduction at −20°C</td></tr>
+          <tr><td>Battery replacement</td><td>Field-replaceable, tool-free panel access, hot-swap capable</td></tr>
+          <tr><td>Aux power output</td><td>2× USB-A (5V/2.4A), 1× USB-C (5V/3A)</td></tr>
+        </table>
+      </div>
+
+      <!-- ACQUISITION -->
+      <div class="spec-group">
+        <div class="section-label">03</div>
+        <div class="spec-group-header"><h2>Acquisition System</h2></div>
+        <table class="spec-table">
+          <tr><td>Antenna configuration</td><td>Dual removable whip (top-mounted), RP-SMA connectors</td></tr>
+          <tr><td>Band A</td><td>400–512 MHz, adjustable in 12.5 kHz steps</td></tr>
+          <tr><td>Band B</td><td class="amber">Configurable — see firmware documentation</td></tr>
+          <tr><td>Simultaneous acquisition</td><td>Yes, independent processing chains per band</td></tr>
+          <tr><td>Sensitivity</td><td>−118 dBm typical (Band A)</td></tr>
+          <tr><td>Output impedance</td><td>50Ω nominal</td></tr>
+          <tr><td>Recording format</td><td><span class="redacted">REDACTED — AUTH REQUIRED</span></td></tr>
+          <tr><td>Internal storage</td><td>512 GB (encrypted)</td></tr>
+          <tr><td>Encryption standard</td><td>AES-256-GCM at rest, TLS 1.3 in transit</td></tr>
+          <tr><td>Data exfiltration</td><td>USB-C, or encrypted wireless (requires SSID configuration)</td></tr>
+        </table>
+        <p class="spec-note">Band B configuration is governed by applicable regulations in your region of operation. Consult the firmware documentation and your operating authority before configuring Band B for active use.</p>
+      </div>
+
+      <!-- DISPLAY -->
+      <div class="spec-group">
+        <div class="section-label">04</div>
+        <div class="spec-group-header"><h2>Display &amp; Interface</h2></div>
+        <table class="spec-table">
+          <tr><td>Display type</td><td>Circular OLED, 102mm aperture, 800×800 effective resolution</td></tr>
+          <tr><td>Brightness</td><td>1200 nit peak, auto-dimming with ambient sensor</td></tr>
+          <tr><td>Display content</td><td>Directional indicator array, signal acquisition visualization, status overlay</td></tr>
+          <tr><td>Night mode</td><td>Red-shift, 0.5 nit minimum, activated via toggle SW-4</td></tr>
+          <tr><td>Status indicators</td><td>5× amber LED (top panel), individually addressable via firmware</td></tr>
+          <tr><td>Input method</td><td>Physical controls only. No touchscreen. No capacitive input.</td></tr>
+          <tr><td>Control layout</td><td>4 primary rotary, 2 secondary rotary, 6 toggle switches, 4 push buttons</td></tr>
+          <tr><td>Audio output</td><td>Speaker (top-right grille), 3.5mm mono jack, selectable in firmware</td></tr>
+        </table>
+      </div>
+
+      <!-- APPLICATION -->
+      <div class="spec-group">
+        <div class="section-label">05</div>
+        <div class="spec-group-header"><h2>Application &amp; Compliance</h2></div>
+        <table class="spec-table">
+          <tr><td>Primary application</td><td>Field classification, unstructured environment, extended duration</td></tr>
+          <tr><td>Secondary application</td><td><span class="redacted">REDACTED — AUTH REQUIRED</span></td></tr>
+          <tr><td>Intended operator</td><td>Trained personnel. Consult Section 2 of the operating manual.</td></tr>
+          <tr><td>Civilian availability</td><td>Limited. Not all configurations available. Contact support.</td></tr>
+          <tr><td>Certifications</td><td>CE, FCC Part 15 (passive receive only), MIL-STD-810H</td></tr>
+          <tr><td>Export classification</td><td><span class="redacted">REDACTED — AUTH REQUIRED</span></td></tr>
+          <tr><td>Warranty</td><td>36 months, depot repair. Field repair documentation available on request.</td></tr>
+          <tr><td>Country of origin</td><td>Assembled in-facility. Components: multinational.</td></tr>
+        </table>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Aethera Systems</div>
+      <div class="footer-meta">
+        ASU-1 &nbsp;·&nbsp; Revision C &nbsp;·&nbsp; Limited Distribution<br>
+        Documentation version 4.1 &nbsp;·&nbsp; machine.monster<br>
+        Not for resale or unauthorized distribution
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

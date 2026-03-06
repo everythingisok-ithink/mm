@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firmware — AETHERA ASU-1</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../" class="wordmark">
+        <span class="brand">Aethera</span>
+        <span class="model">ASU-1</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="../">Overview</a></li>
+          <li><a href="../specifications/">Specifications</a></li>
+          <li><a href="../manual/">Manual</a></li>
+          <li><a href="../firmware/" class="active">Firmware</a></li>
+          <li><a href="../support/">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="status-bar">
+    <div class="status-bar-inner">
+      <div class="status-item"><span class="status-dot"></span> Current: v4.1.7</div>
+      <div class="status-item"><span class="status-dot dim"></span> Released 2024-09-03</div>
+      <div class="status-item"><span class="status-dot dim"></span> 14 versions in history</div>
+      <div class="status-item"><span class="status-dot red"></span> 2 anomaly reports on record</div>
+    </div>
+  </div>
+
+  <main>
+    <div class="site-wrapper">
+      <div class="page-hero">
+        <div class="eyebrow">ASU-1 Documentation</div>
+        <h1>Firmware</h1>
+        <p class="subtitle">Complete revision history for ASU-1 firmware. Install only via authenticated USB-C connection. Do not interrupt firmware installation. Anomalous behavior following a firmware update should be reported to support immediately.</p>
+      </div>
+
+      <div class="fw-meta-bar">
+        <div class="fw-meta-item">
+          <span class="fw-meta-label">Current Version</span>
+          <span class="fw-meta-value amber">v4.1.7</span>
+        </div>
+        <div class="fw-meta-item">
+          <span class="fw-meta-label">Release Date</span>
+          <span class="fw-meta-value">2024-09-03</span>
+        </div>
+        <div class="fw-meta-item">
+          <span class="fw-meta-label">Compatible Hardware</span>
+          <span class="fw-meta-value">ASU-1 Rev. B, Rev. C</span>
+        </div>
+        <div class="fw-meta-item">
+          <span class="fw-meta-label">Install Method</span>
+          <span class="fw-meta-value">USB-C authenticated transfer</span>
+        </div>
+        <div class="fw-download-wrap">
+          <span class="fw-install-btn">↓ Download v4.1.7</span>
+        </div>
+      </div>
+
+      <!-- v4.1.7 -->
+      <div class="fw-entry">
+        <div class="fw-header">
+          <span class="fw-version">v4.1.7</span>
+          <span class="fw-date">2024-09-03</span>
+          <span class="fw-tag stable">Stable</span>
+        </div>
+        <ul class="fw-changes">
+          <li>Improved Band A frequency step stability at temperature extremes below −20°C</li>
+          <li>Corrected LED 3 indicator flicker during high-throughput write operations</li>
+          <li>Adjusted night mode minimum brightness from 0.8 nit to 0.5 nit per field operator feedback</li>
+          <li>Battery calibration algorithm update — improves duration estimate accuracy by ~11%</li>
+          <li>Minor display rendering correction for directional array at high refresh rates</li>
+        </ul>
+      </div>
+
+      <!-- v4.1.4 -->
+      <div class="fw-entry">
+        <div class="fw-header">
+          <span class="fw-version">v4.1.4</span>
+          <span class="fw-date">2024-05-17</span>
+          <span class="fw-tag stable">Stable</span>
+        </div>
+        <ul class="fw-changes">
+          <li>Resolved intermittent Band B dropout when operating simultaneously with Band A above 480 MHz</li>
+          <li>R5/R6 secondary rotary controls now configurable via USB-C parameter file</li>
+          <li>Push button B3 default function reassigned from display brightness to Band A/B phase alignment</li>
+          <li>Internal storage encryption key rotation interval extended from 24hr to 72hr — reduces wear on storage controller</li>
+          <li>Startup POST sequence shortened by approximately 1.2 seconds</li>
+        </ul>
+      </div>
+
+      <!-- v4.0.9 -->
+      <div class="fw-entry">
+        <div class="fw-header">
+          <span class="fw-version">v4.0.9</span>
+          <span class="fw-date">2024-01-08</span>
+          <span class="fw-tag critical">Critical</span>
+        </div>
+        <ul class="fw-changes">
+          <li>Security patch: addressed authenticated session vulnerability in USB-C transfer protocol</li>
+          <li>EMIT control behavior correction — see anomaly note below</li>
+          <li class="anomaly">Corrected unintended EMIT activation under specific Band A + Band B simultaneous conditions. Prior behavior: unit would activate EMIT autonomously when both acquisition bands registered signal patterns matching internal pattern table. This was not intended behavior. The pattern table has been isolated. Autonomous EMIT activation is no longer possible.</li>
+          <li>All units produced before 2023-11-01 should update immediately</li>
+        </ul>
+        <div class="anomaly-note">
+          <span class="an-label">Anomaly Report · AR-0017</span>
+          Eleven field operators reported that their units activated EMIT without manual input between October and December 2023. The triggering condition has been identified and corrected in v4.0.9. Operators who experienced this behavior are encouraged to submit a support ticket referencing AR-0017. We are still evaluating whether the pattern table that triggered this behavior was present in the factory firmware or introduced via a prior update. Investigation ongoing.
+        </div>
+      </div>
+
+      <!-- v4.0.2 -->
+      <div class="fw-entry">
+        <div class="fw-header">
+          <span class="fw-version">v4.0.2</span>
+          <span class="fw-date">2023-08-14</span>
+          <span class="fw-tag stable">Stable</span>
+        </div>
+        <ul class="fw-changes">
+          <li>Major version: complete acquisition stack rewrite for Rev. C hardware</li>
+          <li>Dual-band simultaneous operation enabled (previously sequential only)</li>
+          <li>New display rendering engine — 40% reduction in power draw for display subsystem</li>
+          <li>LSOD control implemented (Loss-of-Signal Override Disable) — see Section 4 of manual</li>
+          <li>EMIT control implemented — see Section 4 of manual</li>
+          <li>Removed legacy Band A preset configuration mode (deprecated since v3.2)</li>
+          <li>Startup sequence revised: POST now tests EMIT subsystem integrity on each boot</li>
+        </ul>
+      </div>
+
+      <!-- v3.4.1 -->
+      <div class="fw-entry">
+        <div class="fw-header">
+          <span class="fw-version">v3.4.1</span>
+          <span class="fw-date">2022-11-30</span>
+          <span class="fw-tag stable">Stable</span>
+        </div>
+        <ul class="fw-changes">
+          <li>Final v3 release for Rev. B hardware</li>
+          <li>Battery duration improvements — LiFePO₄ discharge curve refinement</li>
+          <li>Corrected edge case in frequency tuning logic that caused R1 to skip steps at certain gain settings</li>
+          <li>Audio output routing now retains state across power cycles</li>
+        </ul>
+      </div>
+
+      <!-- v3.1.0 -->
+      <div class="fw-entry">
+        <div class="fw-header">
+          <span class="fw-version">v3.1.0</span>
+          <span class="fw-date">2022-02-07</span>
+          <span class="fw-tag stable">Stable</span>
+        </div>
+        <ul class="fw-changes">
+          <li>First public firmware release</li>
+          <li>Band A single-channel acquisition, frequency configurable via R1</li>
+          <li>Circular OLED display initialization and directional array rendering</li>
+          <li>Internal storage with AES-256 encryption</li>
+          <li>USB-C data transfer and firmware update pathway</li>
+          <li class="redact">Three additional subsystems initialized in this version are not described here. They are described in Section 4 of the operating manual.</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Aethera Systems</div>
+      <div class="footer-meta">
+        ASU-1 &nbsp;·&nbsp; Revision C &nbsp;·&nbsp; Limited Distribution<br>
+        Documentation version 4.1 &nbsp;·&nbsp; machine.monster<br>
+        Not for resale or unauthorized distribution
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

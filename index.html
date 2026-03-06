@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AETHERA ASU-1 — machine.monster</title>
+  <meta name="description" content="AETHERA ASU-1. Field classification unit. Extended duration operation.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="./" class="wordmark">
+        <span class="brand">Aethera</span>
+        <span class="model">ASU-1</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="./" class="active">Overview</a></li>
+          <li><a href="specifications/">Specifications</a></li>
+          <li><a href="manual/">Manual</a></li>
+          <li><a href="firmware/">Firmware</a></li>
+          <li><a href="support/">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="status-bar">
+    <div class="status-bar-inner">
+      <div class="status-item"><span class="status-dot"></span> System nominal</div>
+      <div class="status-item"><span class="status-dot dim"></span> Firmware v4.1.7</div>
+      <div class="status-item"><span class="status-dot dim"></span> Last sync: <span id="sync-time"></span></div>
+      <div class="status-item"><span class="status-dot red"></span> Section 4 restricted</div>
+    </div>
+  </div>
+
+  <main>
+    <div class="site-wrapper">
+      <div class="hero">
+        <div class="hero-left">
+          <div class="hero-kicker">Aethera Systems &nbsp;·&nbsp; Field Classification Unit</div>
+          <h1>
+            ASU
+            <span class="model-line">Model One</span>
+          </h1>
+          <p class="hero-desc">
+            Precision instrument for structured and unstructured field environments.
+            Extended duration operation. Dual-band acquisition. Walnut-stabilized chassis.
+            <br><br>
+            Not all configurations are available for civilian deployment.
+          </p>
+          <div class="hero-links">
+            <a href="specifications/" class="btn-primary">View Specifications →</a>
+            <a href="manual/" class="btn-ghost">Operating Manual</a>
+          </div>
+          <div class="classification">
+            <span class="cls-dot"></span>
+            Classification: Limited Distribution
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="machine-img-wrap">
+            <img src="machine.png" alt="AETHERA ASU-1 Field Unit">
+            <div class="machine-label">AETHERA / ASU-1 / REV. C</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <div class="stat-value">72<span>hr</span></div>
+          <div class="stat-label">Operational Duration</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">—</div>
+          <div class="stat-label">Primary Application</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">2<span>×</span></div>
+          <div class="stat-label">Acquisition Bands</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">IP<span>67</span></div>
+          <div class="stat-label">Environmental Rating</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-wrapper">
+      <div class="overview">
+        <div class="overview-grid">
+
+          <div class="overview-label-col">
+            <div class="section-label">Product Overview</div>
+            <h2>Built for conditions that have no name.</h2>
+            <ul class="nav-list">
+              <li><a href="specifications/">Full Specifications</a></li>
+              <li><a href="manual/">Operating Manual</a></li>
+              <li><a href="firmware/">Firmware History</a></li>
+              <li><a href="support/">Support & Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="overview-content">
+            <div class="panel">
+              <div class="panel-title">
+                Chassis & Construction
+                <span class="panel-tag ok">Certified</span>
+              </div>
+              <p>CNC-milled 6061-T6 aluminum housing with walnut stabilizer panels. Porthole display bezel is machined
+                from a single billet. All toggle controls are military-spec brass with positive click confirmation. The
+                unit does not rattle.</p>
+            </div>
+
+            <div class="panel">
+              <div class="panel-title">
+                Acquisition System
+                <span class="panel-tag">Dual-Band</span>
+              </div>
+              <p>Integrated dual-antenna array for simultaneous acquisition across two independent bands. Antenna
+                geometry is optimized for unobstructed line-of-sight and degraded environments. Band assignments are
+                configurable in firmware.</p>
+            </div>
+
+            <div class="panel">
+              <div class="panel-title">
+                Display & Interface
+                <span class="panel-tag">Rev. C</span>
+              </div>
+              <p>Circular porthole display with directional indicator array (N/S/E/W). Five amber LED status indicators
+                on upper panel. Physical toggle and rotary controls only — no touchscreen, no capacitive input. The
+                interface does not require explanation to operate. Most operators report an immediate intuitive response
+                to the controls.</p>
+            </div>
+
+            <div class="panel">
+              <div class="panel-title">
+                Operational Environment
+                <span class="panel-tag warn">Read Manual §3</span>
+              </div>
+              <p>Rated for operation in environments classified as unstructured, transitional, or undefined. The ASU-1
+                performs consistently in conditions that cause other instruments to behave erratically. The mechanism by
+                which this is achieved is documented in Section 4 of the operating manual.</p>
+              <p class="note-access">Section 4 requires
+                authorization to access. Contact support to request clearance.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Aethera Systems</div>
+      <div class="footer-meta">
+        ASU-1 &nbsp;·&nbsp; Revision C &nbsp;·&nbsp; Limited Distribution<br>
+        Documentation version 4.1 &nbsp;·&nbsp; machine.monster<br>
+        Not for resale or unauthorized distribution
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const now = new Date();
+    const pad = n => String(n).padStart(2, '0');
+    document.getElementById('sync-time').textContent =
+      `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())} UTC`;
+  </script>
+
+</body>
+
+</html>

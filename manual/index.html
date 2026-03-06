@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operating Manual — AETHERA ASU-1</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../" class="wordmark">
+        <span class="brand">Aethera</span>
+        <span class="model">ASU-1</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="../">Overview</a></li>
+          <li><a href="../specifications/">Specifications</a></li>
+          <li><a href="../manual/" class="active">Manual</a></li>
+          <li><a href="../firmware/">Firmware</a></li>
+          <li><a href="../support/">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="status-bar">
+    <div class="status-bar-inner">
+      <div class="status-item"><span class="status-dot"></span> Viewing: Operating Manual</div>
+      <div class="status-item"><span class="status-dot dim"></span> Rev. C &nbsp;·&nbsp; Doc 4.1</div>
+      <div class="status-item"><span class="status-dot dim"></span> Sections 1–3 available</div>
+      <div class="status-item"><span class="status-dot red"></span> Section 4 restricted</div>
+    </div>
+  </div>
+
+  <main>
+    <div class="site-wrapper">
+      <div class="page-hero">
+        <div class="eyebrow">ASU-1 Documentation</div>
+        <h1>Operating Manual</h1>
+        <p class="subtitle">Complete operating procedures for the AETHERA ASU-1. Read all safety warnings before first operation. Section 4 requires authorization.</p>
+      </div>
+
+      <div class="manual-toc">
+        <div class="toc-title">Table of Contents</div>
+        <ol>
+          <li><a href="#section-1">Safety &amp; Warnings</a><span class="toc-page">p. 4</span></li>
+          <li><a href="#section-2">Initial Setup &amp; Startup Procedure</a><span class="toc-page">p. 9</span></li>
+          <li><a href="#section-3">Controls Reference</a><span class="toc-page">p. 18</span></li>
+          <li class="locked"><a href="#section-4">Operating Principles</a><span class="toc-lock">Restricted</span></li>
+          <li><a href="#section-5">Maintenance &amp; Field Service</a><span class="toc-page">p. 41</span></li>
+        </ol>
+      </div>
+
+      <!-- SECTION 1 -->
+      <div class="manual-section" id="section-1">
+        <div class="manual-section-num">Section 1</div>
+        <h2>Safety &amp; Warnings</h2>
+
+        <div class="warning-block">
+          <span class="warn-icon">⚠ WARN</span>
+          <span class="warn-text"><strong>Do not operate in environments you have not been trained to assess.</strong> The ASU-1 is designed for use in unstructured and transitional environments. Operation by untrained personnel in such environments may produce results that cannot be anticipated or reversed.</span>
+        </div>
+
+        <div class="warning-block">
+          <span class="warn-icon">⚠ WARN</span>
+          <span class="warn-text"><strong>Do not attempt to open the main housing.</strong> The primary chassis contains no user-serviceable components. The battery compartment is accessed via the marked panel on the underside only. Unauthorized disassembly voids warranty and may cause conditions described in Section 4.</span>
+        </div>
+
+        <div class="notice-block">
+          <span class="notice-icon">→ NOTE</span>
+          <span class="notice-text">The ASU-1 will become warm during extended operation. This is normal. Surface temperature should not exceed 42°C under standard load. If the unit becomes too hot to hold comfortably, power down and allow 20 minutes before resuming operation.</span>
+        </div>
+
+        <p>The AETHERA ASU-1 is a precision instrument. It is not fragile, but it is not indestructible. It has been designed to operate reliably in conditions that compromise other equipment. This does not mean it is immune to damage. It means it will continue to function in circumstances where other instruments have stopped producing reliable data.</p>
+
+        <p>Read this section completely before first operation. Personnel who have not completed the operator certification program should not operate the unit without direct supervision by a certified operator for the first <strong>72 hours of field use</strong>.</p>
+      </div>
+
+      <!-- SECTION 2 -->
+      <div class="manual-section" id="section-2">
+        <div class="manual-section-num">Section 2</div>
+        <h2>Initial Setup &amp; Startup Procedure</h2>
+
+        <p>Before first operation, inspect the unit for physical damage incurred during shipping. All toggle switches should be in the DOWN position. Rotary controls should move freely with consistent torque throughout their full range of rotation.</p>
+
+        <p><strong>Antenna installation:</strong> Thread both antennas clockwise into the RP-SMA connectors on the top panel until hand-tight. Do not use tools. The unit will operate with only one antenna installed, but dual-antenna configuration is required for simultaneous dual-band acquisition.</p>
+
+        <ol class="step-list">
+          <li>Confirm all toggles are in the DOWN (OFF) position.</li>
+          <li>Install both antennas hand-tight. Confirm no cross-threading.</li>
+          <li>Open battery compartment (underside panel, quarter-turn latch). Confirm battery is seated and connector is engaged.</li>
+          <li>Close battery compartment. Confirm latch engages.</li>
+          <li>Hold <span class="control-ref">PWR</span> for 3 seconds. The five amber LED indicators will illuminate in sequence from left to right during POST.</li>
+          <li>Wait for POST completion. All five LEDs steady = unit ready. Flashing pattern = see fault codes in Section 3.</li>
+          <li>The porthole display will illuminate and show the directional array. Default orientation is north-up relative to the unit's last known heading.</li>
+          <li>Configure acquisition bands per your operating authority before activating <span class="control-ref">SW-1</span> (Band A enable) or <span class="control-ref">SW-2</span> (Band B enable).</li>
+        </ol>
+
+        <div class="notice-block">
+          <span class="notice-icon">→ NOTE</span>
+          <span class="notice-text">First startup after extended storage may require a 10-minute warm-up period before acquisition systems reach rated sensitivity. The display will show <code>WARM</code> in the lower status field during this period.</span>
+        </div>
+      </div>
+
+      <!-- SECTION 3 -->
+      <div class="manual-section" id="section-3">
+        <div class="manual-section-num">Section 3</div>
+        <h2>Controls Reference</h2>
+
+        <p>All controls are physical. There is no software interface, no menu system, and no touchscreen. This is intentional. Each control has one function. The functions do not change between firmware versions except where explicitly noted in the firmware changelog.</p>
+
+        <table class="spec-table spec-table--tight">
+          <tr><td>PWR</td><td>Power on/off. Hold 3 seconds. Does not interrupt active recording.</td></tr>
+          <tr><td>SW-1</td><td>Band A acquisition enable/disable. LED 1 indicates active state.</td></tr>
+          <tr><td>SW-2</td><td>Band B acquisition enable/disable. LED 2 indicates active state.</td></tr>
+          <tr><td>SW-3</td><td>Recording to internal storage. LED 3 flashes during active write.</td></tr>
+          <tr><td>SW-4</td><td>Night mode (display and LED dim to red-shift, 0.5 nit minimum).</td></tr>
+          <tr><td>SW-5</td><td>Audio output routing. Toggles between speaker, 3.5mm, and off.</td></tr>
+          <tr><td>SW-6</td><td>Function unassigned in current firmware. Reserved.</td></tr>
+          <tr><td>R1 (upper left)</td><td>Band A frequency tuning. Stepped in 12.5 kHz increments.</td></tr>
+          <tr><td>R2 (upper right)</td><td>Band B frequency tuning. Stepped per firmware configuration.</td></tr>
+          <tr><td>R3 (lower left)</td><td>Gain control, Band A.</td></tr>
+          <tr><td>R4 (lower right)</td><td>Gain control, Band B.</td></tr>
+          <tr><td>R5, R6</td><td>Secondary rotary controls. Function is firmware-configurable.</td></tr>
+          <tr><td>B1–B4 (push buttons)</td><td>Context-sensitive. Default functions listed in firmware documentation.</td></tr>
+          <tr><td>LSOD</td><td>Loss-of-signal override disable. See Section 4.</td></tr>
+          <tr><td>EMIT</td><td>See Section 4.</td></tr>
+        </table>
+
+        <div class="notice-block">
+          <span class="notice-icon">→ NOTE</span>
+          <span class="notice-text"><strong>LSOD and EMIT controls are documented in Section 4.</strong> Do not operate these controls without having read Section 4 in full. Operating EMIT without understanding its function has produced results that required depot-level evaluation to resolve.</span>
+        </div>
+      </div>
+
+      <!-- SECTION 4 — LOCKED -->
+      <div class="manual-section" id="section-4">
+        <div class="manual-section-num">Section 4</div>
+        <h2>Operating Principles</h2>
+
+        <div class="locked-section">
+          <div class="lock-glyph">Access Restricted</div>
+          <div class="lock-title">Authorization Required</div>
+          <div class="lock-body">
+            Section 4 contains documentation for the ASU-1's primary operating principles, including the function of the LSOD and EMIT controls, acquisition methodology, and operational theory.
+            <br><br>
+            This section is not withheld for legal reasons. It is withheld because the information it contains requires context that cannot be provided here.
+          </div>
+          <a href="../support/" class="lock-action">Request Access →</a>
+          <div class="lock-case" id="lock-case-num"></div>
+        </div>
+      </div>
+
+      <!-- SECTION 5 -->
+      <div class="manual-section" id="section-5">
+        <div class="manual-section-num">Section 5</div>
+        <h2>Maintenance &amp; Field Service</h2>
+
+        <p>The ASU-1 requires minimal routine maintenance. The unit is sealed against dust and moisture and does not require periodic cleaning of internal components. The following maintenance procedures are recommended at the intervals listed.</p>
+
+        <p><strong>After each deployment:</strong> Wipe exterior with dry cloth. Inspect antenna connectors for debris or corrosion. Confirm all toggle switches move freely and return to set position without resistance.</p>
+
+        <p><strong>Every 90 days:</strong> Full discharge/charge cycle to maintain battery calibration. Update firmware if a new version is available. Review any anomalies noted during operation with your supervising operator.</p>
+
+        <p><strong>Every 12 months:</strong> Return to depot for full calibration verification. Depot service includes acquisition sensitivity verification, display calibration, and physical inspection. Calibration certificate is issued on completion and must be retained for operational records.</p>
+
+        <div class="notice-block">
+          <span class="notice-icon">→ NOTE</span>
+          <span class="notice-text">The walnut side panels may show natural variation, darkening, or minor cracking with age and use. This is not a defect. It is not a cause for warranty claim. Some operators report that the panels develop a character over time that they find meaningful. Aethera does not make claims about this.</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Aethera Systems</div>
+      <div class="footer-meta">
+        ASU-1 &nbsp;·&nbsp; Revision C &nbsp;·&nbsp; Limited Distribution<br>
+        Documentation version 4.1 &nbsp;·&nbsp; machine.monster<br>
+        Not for resale or unauthorized distribution
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Generate a plausible case number for the lock
+    const seed = Math.floor(Date.now() / 86400000);
+    const caseNum = 'CASE-' + (seed * 7919 % 99000 + 10000).toString().toUpperCase();
+    document.getElementById('lock-case-num').textContent = 'Reference: ' + caseNum + ' · Session logged';
+  </script>
+
+</body>
+</html>

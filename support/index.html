@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — AETHERA ASU-1</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../" class="wordmark">
+        <span class="brand">Aethera</span>
+        <span class="model">ASU-1</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="../">Overview</a></li>
+          <li><a href="../specifications/">Specifications</a></li>
+          <li><a href="../manual/">Manual</a></li>
+          <li><a href="../firmware/">Firmware</a></li>
+          <li><a href="../support/" class="active">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="status-bar">
+    <div class="status-bar-inner">
+      <div class="status-item"><span class="status-dot"></span> Support queue: open</div>
+      <div class="status-item"><span class="status-dot dim"></span> Avg. response: 2–5 business days</div>
+      <div class="status-item"><span class="status-dot dim"></span> Section 4 access requests reviewed manually</div>
+      <div class="status-item"><span class="status-dot red"></span> AR-0017 investigation ongoing</div>
+    </div>
+  </div>
+
+  <main>
+    <div class="site-wrapper">
+      <div class="page-hero">
+        <div class="eyebrow">ASU-1 Support</div>
+        <h1>Contact &amp; Support</h1>
+        <p class="subtitle">Technical support, Section 4 access requests, anomaly reports, and warranty claims. All submissions are logged. Access requests are reviewed by a human.</p>
+      </div>
+
+      <div class="support-layout">
+
+        <div class="support-sidebar">
+          <div class="section-label">Before You Submit</div>
+          <h2>Common issues</h2>
+          <p>Most questions are answered in the operating manual. If the unit is producing unexpected output, check firmware version first — many field anomalies were resolved in v4.0.9.</p>
+          <p>For Section 4 access requests, select the appropriate inquiry type below. Access requests require a valid unit serial number and a brief description of your operational context. Not all requests are approved.</p>
+
+          <ul class="contact-meta">
+            <li>
+              <span class="meta-label">Response Time</span>
+              <span class="meta-value">2–5 business days</span>
+            </li>
+            <li>
+              <span class="meta-label">Section 4 Access</span>
+              <span class="meta-value">5–10 business days</span>
+            </li>
+            <li>
+              <span class="meta-label">Warranty Claims</span>
+              <span class="meta-value">Requires proof of purchase</span>
+            </li>
+            <li>
+              <span class="meta-label">Anomaly Reports</span>
+              <span class="meta-value amber">Reviewed same day</span>
+            </li>
+            <li>
+              <span class="meta-label">Depot Repair</span>
+              <span class="meta-value">Contact required before shipping</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="form-section">
+            <div class="form-section-title">Submit a Request</div>
+            <div class="form-section-sub">All fields marked with <span class="c-amber">*</span> are required. Your submission is logged with your session metadata. Do not include classified information in the message field.</div>
+
+            <div class="required-note">Fields marked <span>*</span> are required</div>
+
+            <div id="support-form">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label>First Name *</label>
+                  <input type="text" id="fname" placeholder="First name" autocomplete="off">
+                </div>
+                <div class="form-field">
+                  <label>Last Name *</label>
+                  <input type="text" id="lname" placeholder="Last name" autocomplete="off">
+                </div>
+                <div class="form-field">
+                  <label>Email Address *</label>
+                  <input type="text" id="email" placeholder="operator@domain.com" autocomplete="off">
+                </div>
+                <div class="form-field">
+                  <label>Unit Serial Number</label>
+                  <input type="text" id="serial" placeholder="ASU1-XXXXX-X" autocomplete="off">
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-field full">
+                  <label>Inquiry Type *</label>
+                  <select id="inquiry-type">
+                    <option value="">Select inquiry type</option>
+                    <option value="technical">Technical support</option>
+                    <option value="section4">Section 4 access request</option>
+                    <option value="anomaly">Anomaly report</option>
+                    <option value="warranty">Warranty claim</option>
+                    <option value="firmware">Firmware issue</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-divider">Message</div>
+
+              <div class="form-field form-field--spaced">
+                <label>Description *</label>
+                <textarea id="message" placeholder="Describe your issue or request. For Section 4 access requests, include your operational context and the specific controls or procedures you require access to understand."></textarea>
+              </div>
+
+              <div class="form-submit-row">
+                <button class="submit-btn" onclick="submitForm()">
+                  Submit Request
+                  <span class="btn-arrow">→</span>
+                </button>
+                <span class="form-submit-note">Submissions are logged. Session metadata is retained for 90 days per our operational security policy.</span>
+              </div>
+            </div>
+
+            <div class="confirmation-panel" id="confirmation">
+              <div class="conf-header">
+                <div>
+                  <div class="conf-case" id="conf-case-num"></div>
+                  <div class="conf-status">Submission Received</div>
+                </div>
+                <div class="conf-dot-status">
+                  <span class="status-dot"></span> Logged
+                </div>
+              </div>
+              <div class="conf-body" id="conf-body"></div>
+              <div class="conf-footer" id="conf-footer"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Aethera Systems</div>
+      <div class="footer-meta">
+        ASU-1 &nbsp;·&nbsp; Revision C &nbsp;·&nbsp; Limited Distribution<br>
+        Documentation version 4.1 &nbsp;·&nbsp; machine.monster<br>
+        Not for resale or unauthorized distribution
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function generateCase() {
+      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ0123456789';
+      let id = 'CASE-';
+      for (let i = 0; i < 8; i++) id += chars[Math.floor(Math.random() * chars.length)];
+      return id;
+    }
+
+    const responses = {
+      technical: {
+        body: `<p>Your technical support request has been received and assigned to the field operations team. A support engineer will review your submission and contact you at the address provided.</p>
+               <p>If your issue is related to anomalous unit behavior following a firmware update, please update your ticket to reference <strong>AR-0017</strong> and include your firmware version.</p>
+               <p>Mean response time for technical inquiries is <strong>2–3 business days</strong>. Complex cases may require escalation to depot.</p>`,
+        footer: 'Retain your case number for reference. Do not submit duplicate inquiries — this delays response for all operators.'
+      },
+      section4: {
+        body: `<p>Your Section 4 access request has been received. These requests are reviewed manually and require verification of your operational context and unit registration.</p>
+               <p>You will receive a follow-up communication within <strong>5–10 business days</strong>. In some cases, access is provided via a secure document transfer rather than direct web access.</p>
+               <p><strong>Note:</strong> Section 4 access is not granted based on curiosity alone. If your operational context does not require knowledge of the ASU-1's primary operating principles, your request may be declined. This is not a judgment. It is a precaution.</p>`,
+        footer: 'Access decisions are logged. Approved access is non-transferable and unit-specific.'
+      },
+      anomaly: {
+        body: `<p>Your anomaly report has been flagged for same-day review. The field operations team will contact you within <strong>24 hours</strong>.</p>
+               <p><strong>If your unit activated EMIT without manual input:</strong> This behavior was identified in v4.0.9 and corrected. Update your firmware immediately if you have not done so. Reference <strong>AR-0017</strong>.</p>
+               <p>If you experienced behavior not related to EMIT activation, your report will be evaluated against the existing anomaly database. If your experience matches an open investigation, you will be notified.</p>
+               <p>We take anomaly reports seriously. Every report on file has been reviewed by at least two engineers.</p>`,
+        footer: 'Anomaly reports are retained indefinitely. They have contributed to three firmware corrections since 2023.'
+      },
+      warranty: {
+        body: `<p>Your warranty claim has been received. The warranty team will review your submission and contact you to confirm eligibility and arrange service.</p>
+               <p>Please do not ship the unit until you receive explicit instructions. Unsolicited shipments cannot be accepted and will be returned.</p>
+               <p>Standard warranty processing takes <strong>7–10 business days</strong> from confirmation of eligibility. Depot repair and return typically adds 2–3 weeks depending on your location.</p>`,
+        footer: 'Proof of purchase is required for all warranty claims. Serial number verification will be completed before service begins.'
+      },
+      firmware: {
+        body: `<p>Your firmware issue report has been received. Before a support engineer reviews your case, please confirm the following:</p>
+               <p>1. You are running the latest firmware (v4.1.7). 2. You installed via authenticated USB-C transfer, not via third-party tools. 3. You allowed the POST sequence to complete fully before operating controls.</p>
+               <p>If you experienced autonomous control activation or unexpected EMIT behavior, reference <strong>AR-0017</strong> in your follow-up.</p>`,
+        footer: 'Firmware issues that cannot be resolved remotely may require depot-level evaluation.'
+      },
+      other: {
+        body: `<p>Your submission has been received and logged. It will be reviewed within <strong>2–5 business days</strong> and routed to the appropriate team.</p>
+               <p>If your inquiry involves something you cannot categorize or describe precisely, that is not unusual. Submit what you have. The support team is experienced with submissions that are difficult to articulate.</p>`,
+        footer: 'All submissions are reviewed. None are discarded without evaluation.'
+      }
+    };
+
+    function submitForm() {
+      const fname = document.getElementById('fname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const type = document.getElementById('inquiry-type').value;
+      const message = document.getElementById('message').value.trim();
+
+      if (!fname || !email || !type || !message) {
+        // Shake the button
+        const btn = document.querySelector('.submit-btn');
+        btn.style.borderColor = 'var(--red)';
+        btn.style.color = 'var(--red)';
+        setTimeout(() => {
+          btn.style.borderColor = '';
+          btn.style.color = '';
+        }, 1200);
+        return;
+      }
+
+      const caseNum = generateCase();
+      const now = new Date();
+      const pad = n => String(n).padStart(2,'0');
+      const timestamp = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())} UTC`;
+
+      document.getElementById('conf-case-num').textContent = caseNum;
+
+      const r = responses[type] || responses.other;
+      document.getElementById('conf-body').innerHTML = r.body;
+      document.getElementById('conf-footer').textContent =
+        `${caseNum} · Submitted ${timestamp} · ${r.footer}`;
+
+      document.getElementById('support-form').style.display = 'none';
+      const panel = document.getElementById('confirmation');
+      panel.style.display = 'block';
+      panel.style.opacity = '0';
+      panel.style.transition = 'opacity 0.5s';
+      setTimeout(() => { panel.style.opacity = '1'; }, 50);
+    }
+  </script>
+
+</body>
+</html>
